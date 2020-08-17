@@ -1,2 +1,7 @@
 -----beginmessage-----
-––––-endmessage––––-
+from: ebgcosta@uea.edu.br;
+to: monitorriaFTC@gmail.com;
+ip autor
+time stamp
+-----------------------
+-----endmessage-----
