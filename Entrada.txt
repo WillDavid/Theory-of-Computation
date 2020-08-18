@@ -1,15 +1,7 @@
-––––-beginmessage––––-
+-----beginmessage-----
 from: ebgcosta@uea.edu.br;
 to: monitoriaFTC@gmail.com;
 194.138.1.125
 2020.08.13 11:13:51
 -----------------------
-Monitores,
-bom dia!
-
-15:38 18/08/2020
-preciso dos casos de teste hoje a tarde.
-Atenciosamente,
-Elloa
-––––-endmessage––––-
-
+-----endmessage-----

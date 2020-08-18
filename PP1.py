@@ -32,13 +32,13 @@ def UltimaLinha(endi):
    
 
 def FromToEmailVerificacao(fromEmail):
-    if(re.search(r'^from:\s+[a-zA-Z]+\@[a-zA-Z]+\.[a-zA-Z]+\.[a-zA-Z]+\;$', fromEmail)):
+    if(re.search(r'^from:\s+[a-zA-Z0-9]+\@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+){1,2}\;$', fromEmail)):
         print("Verificacao From Email = True")
     else:
         print("Verificacao From Email = False")
 
 def ToEmailVerificacao(toEmail):
-    if(re.search(r'^to:\s+[a-zA-Z]+\@[a-zA-Z]+(\.[a-zA-Z]+){1,2}\;$', toEmail)):
+    if(re.search(r'^to:\s+[a-zA-Z0-9]+\@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+){1,2}\;$', toEmail)):
         print("Verificacao To Email = True")
     else:
         print("Verificacao To Email = False")
@@ -46,11 +46,13 @@ def ToEmailVerificacao(toEmail):
 
 def escopo(escopoTexto):
     if(re.findall(r'(-){23}(\n+(\w+).*)*',escopoTexto)):
-       print("Texto safe")
+        print("Texto safe")
     else:
         print("Texto nao safe")
 
-    
+#re.findall(r'(-){23}(\n+(\w+).*)*',escopoTexto) -> Verifica inicio e fim
+
+ 
     
 
 
