@@ -44,7 +44,11 @@ def ToEmailVerificacao(toEmail):
         print("Verificacao To Email = False")
 
 
-
+def escopo(escopoTexto):
+    if(re.findall(r'(-){23}(\n+(\w+).*)*',escopoTexto)):
+       print("Texto safe")
+    else:
+        print("Texto nao safe")
 
     
     
@@ -61,6 +65,7 @@ fromEmail = texto.readline()
 toEmail = texto.readline()
 ipAutor = texto.readline()
 timeStamp = texto.readline()
+escopoTexto = texto.read()
 separador = texto.readline()
 endi = texto.readline()
 
@@ -70,6 +75,7 @@ PrimeiraEUltimaLinha(begin, status)
 FromToEmailVerificacao(fromEmail)
 ToEmailVerificacao(toEmail)
 UltimaLinha(endi)
+escopo(escopoTexto)
 Separador(separador, status)
 
 
