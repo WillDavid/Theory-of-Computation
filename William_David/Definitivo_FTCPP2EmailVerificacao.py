@@ -1,6 +1,6 @@
 import re
 
-#18/08/2020
+# 18/08/2020
 # FTC - Atividade Avaliativa 02
 # Script desenvolvido com parceria de William David e Leticia Minelvino
 
