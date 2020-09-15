@@ -18,9 +18,6 @@ def Separador(separador, status):
 
 def PrimeiraEUltimaLinha(begin, status):
     if(re.search(r'-{5}beginmessage-{5}',begin)):
-        status=status+1
-        print(status)
-        print("Primeira Linha = True")
         return 1
         
     else:
@@ -31,11 +28,8 @@ def PrimeiraEUltimaLinha(begin, status):
 
 def FromToEmailVerificacao(fromEmail,status):
     if(re.search(r'^from:\s+[a-zA-Z0-9]+\@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+){1,2}\;$', fromEmail)):
-        print("Verificacao From Email = True")
-        status=status+1
         return 1
     else:
-        print("Verificacao From Email = False")
         return 0
        
 
