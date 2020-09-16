@@ -1,26 +1,27 @@
-string = "(())()())"
-
-
+string = "([{}])"
 pilha = []
-
+correto = True
 for i in string:
-    print(pilha)
+    
     if i== "(" or i=="[" or i=="{":
         pilha.append(i)
+        topo = i
     else:
-        topo = pilha[-1]
-        if (i == ")" and topo == "(") or (i=="]" and topo == "[") or (i=="}" and topo == "{"):
-            pilha.pop()
-            status = True
+        if pilha != []:
+            if (i == ")" and topo == "(" ) or (i=="]" and i=="[") or (i=="}" and i=="{"):    
+                if len(pilha) > 0:
+                    pilha.pop()
+            else:
+                correto = False
         else:
-            status = False
-            break
-            
-        
+            correto = False
+    print(pilha)             
 
-if status == True:
+if (len(pilha) == 0) and (correto == True):
     print("casada")
 else:
     print("nao casada")
 
 
+
+    #Se eu tenho ( )
