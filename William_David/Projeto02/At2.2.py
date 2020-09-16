@@ -1,6 +1,6 @@
-string = "{[()[]"
+string = "}["
 pilha = []
-correto = True
+casado = True
 for i in string:
     
     if i== "(" or i=="[" or i=="{":
@@ -14,46 +14,42 @@ for i in string:
                     if len(pilha) > 0:
                         topo = pilha[len(pilha)-1]
             else:
-                correto = False
+                casado = False
         else:
-            correto = False
+            casado = False
 
-if (len(pilha) == 0) and (correto == True):
-    print("casada")
-else:
-    print("nao casada")
-
+#parte 2
 lista = []
 for i in string:
     lista.append(i)
-print(lista)
 
-d = [('(', "1"), (')', "1"),('[', "2"), (']', "2"), ('{', "3"), ('}', "3")]
+d = [('(', "3"), (')', "4"),('[', "2"), (']', "4"), ('{', "1"), ('}', "6")]
 dicio = dict(d)
 
 s = ''
 for i in lista:
     s += dicio[i]
 
-print(s)
-
-# Will Tentativa
+correto = True
 for i in range(len(s)):
-    if(s[i] == "1"):
-        if(s[i] != [0]):
-            if(s[i-1] == "2" or s[i-1] == "3" or s[i-1] == "1"):
-                print("tem") #lado esquerdo
-    
+    if s[i] == "3":
+        if s[i+1] == "1" or s[i+1] == "2":
+            correto = False
+            break
+    elif s[i] == "2":
+        if s[i+1] == "1" or s[i+1] == "6":
+            correto = False
+            break
+    elif s[i] == "1":
+        print("to vendo")
+    else:
+        print("nao faz nada")
 
-    elif(s[i] == "2"):
-        if(s[i] != [0]):
-            if(s[i-1] == "3" or  s[i-1] == "2"):
-                print("tem") #lado esquerdo
+if (len(pilha) == 0) and (casado == True):
+    if(correto):
+        print("casada e correta")
+    else:
+        print("casada e incorreta")
+else:
+    print("nao casada")
 
-    elif(s[i] == "3"):
-        if(s[i] !=[0]):
-            if(s[i])
-    
-
-            
-            
