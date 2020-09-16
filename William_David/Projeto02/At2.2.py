@@ -49,6 +49,10 @@ for i in range(len(s)):
         if(s[i] != [0]):
             if(s[i-1] == "3" or  s[i-1] == "2"):
                 print("tem") #lado esquerdo
+
+    elif(s[i] == "3"):
+        if(s[i] !=[0]):
+            if(s[i])
     
 
             
