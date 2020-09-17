@@ -1,8 +1,13 @@
-string = "()()()())"
+import re
+string = "{({[[()]]})}"
 pilha = []
 lista = []
 casado = True
 correto = True
+
+
+           
+
 
 
 #tratamento de espaço em branco
@@ -59,6 +64,7 @@ else:
             else:
                 print("nao faz nada")
 
+    
 
     #Verificacao
 
@@ -68,7 +74,33 @@ else:
         else:
             print("casada e incorreta")
 
+            # se ([ -> troca
+            # se [{ -> troca
+            # se ({ -> troca
+
+            # se )] -> troca
+            # se [) -> troca
+            # se }) -> troca
+            
+
+            
+            #trabalhando nessa parte
             '''
+            if(m[i] == "3"):
+                    print("Entrou aqui")
+                    if(m[i+1] == "2" or m[i+1] == "1"):
+                        aux = 
+
+            
+            for i in range(len(m)):
+                if(m[i] == "3"):
+                    print("Entrou aqui")
+                    if(m[i+1] == "2" or m[i+1] == "1"):
+                        aux = 
+
+                        print(aux)   
+                            
+        
             valoresNumero = []
 
             #Trabalhando nessa parte
