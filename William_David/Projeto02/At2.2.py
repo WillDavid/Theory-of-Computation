@@ -1,5 +1,6 @@
 # Título: Atividade Avaliativa 2.2
 # Autor: William David Martins de Almeida
+# Dupla: William David e Leticia Minelvino
 # Versão: Python Estruturado
 # Casos de Teste: 10/10
 # GitHub: https://github.com/WillDavid/Theory-of-Computation
