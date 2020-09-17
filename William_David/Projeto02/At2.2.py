@@ -1,4 +1,4 @@
-string = "[()]{[]}"
+string = "()()()())"
 pilha = []
 lista = []
 casado = True
@@ -67,6 +67,8 @@ else:
             print("casada e correta")
         else:
             print("casada e incorreta")
+
+            '''
             valoresNumero = []
 
             #Trabalhando nessa parte
@@ -75,7 +77,9 @@ else:
 
             print(valoresNumero)
             result = sorted(valoresNumero)
-            print(result)        
+            print(result)  
+
+            '''      
     else:
         print("nao casada") 
 
