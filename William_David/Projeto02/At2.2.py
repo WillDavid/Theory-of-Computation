@@ -1,12 +1,11 @@
 import re
-string = "{({[[()]]})}"
+string = "{[()]([])}"
 pilha = []
 lista = []
 casado = True
 correto = True
 
-
-           
+         
 
 
 
@@ -43,7 +42,7 @@ else:
 
 
 
-        
+
     #parte 2
 
     for i in string:
@@ -80,44 +79,55 @@ else:
         else:
             print("casada e incorreta")
 
-            # se ([ -> troca
-            # se [{ -> troca
-            # se ({ -> troca
+            # se ([ -> troca ok
+            # se [{ -> troca ok
+            # se ({ -> troca ok
 
-            # se )] -> troca
-            # se [) -> troca
-            # se }) -> troca
-            
-
-            
-            #trabalhando nessa parte
-            '''
-            if(m[i] == "3"):
-                    print("Entrou aqui")
-                    if(m[i+1] == "2" or m[i+1] == "1"):
-                        aux = 
-
-            
-            for i in range(len(m)):
-                if(m[i] == "3"):
-                    print("Entrou aqui")
-                    if(m[i+1] == "2" or m[i+1] == "1"):
-                        aux = 
-
-                        print(aux)   
-                            
-        
+            # se ]) -> troca ok
+            # se }] -> troca
+            # se }) -> troca ok         
+         
             valoresNumero = []
-
             #Trabalhando nessa parte
             for i in range(len(s)):
                 valoresNumero.append(s[i])
 
             print(valoresNumero)
-            result = sorted(valoresNumero)
-            print(result)  
+            for i in range(len(valoresNumero)):
+                if(valoresNumero[i] == "3"):
+                    aux = valoresNumero[i]
+                    if(valoresNumero[i+1] == "2" or valoresNumero[i+1] == "1"):
+                        result = valoresNumero[i].replace(valoresNumero[i], valoresNumero[i+1])
+                        valoresNumero[i] = result
+                        valoresNumero[i+1] = aux
+                
+                if(valoresNumero[i] == "2"):
+                    aux = valoresNumero[i]
+                    if(valoresNumero[i+1] == "1"):
+                        result = valoresNumero[i].replace(valoresNumero[i], valoresNumero[i+1])
+                        valoresNumero[i] = result
+                        valoresNumero[i+1] = aux
 
-            '''      
+                if(valoresNumero[i] == "4"):
+                    aux = valoresNumero[i]
+                    if(valoresNumero[i-1] == "5" or valoresNumero[i-1] == "6"):
+                        result = valoresNumero[i].replace(valoresNumero[i], valoresNumero[i-1])
+                        valoresNumero[i] = result
+                        valoresNumero[i-1] = aux
+
+                if(valoresNumero[i] == "5"):
+                    aux = valoresNumero[i]
+                    if(valoresNumero[i-1] == "6"):
+                        result = valoresNumero[i].replace(valoresNumero[i], valoresNumero[i-1])
+                        valoresNumero[i] = result
+                        valoresNumero[i-1] = aux
+                    
+            
+            
+            print(valoresNumero)
+             
+
+                
     else:
         print("nao casada") 
 
