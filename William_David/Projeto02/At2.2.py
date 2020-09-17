@@ -38,6 +38,12 @@ else:
 
     if (len(pilha) != 0):
         casado = False
+
+
+
+
+
+        
     #parte 2
 
     for i in string:
